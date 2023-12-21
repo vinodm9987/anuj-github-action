@@ -1,23 +1,15 @@
 name: Run Workflow on Comment
 
 on:
-  issue_comment:
-    types: [created]
+  pull_request:
+    branches:
+      - main
 
 jobs:
   run-on-comment:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check if comment contains code-related content
-        run: |
-          if [[ ${{ github.event.comment.body }} =~ (\bcode\b|\bfunction\b|\bclass\b|\bimport\b|\bconst\b) ]]; then
-            echo "Code-related content found. Running workflow."
-          else
-            echo "No code-related content found. Skipping workflow."
-            exit 0
-          fi
-
       - name: Checkout repository
         uses: actions/checkout@v2
 
