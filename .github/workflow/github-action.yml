@@ -1,0 +1,44 @@
+name: Run Workflow on Comment
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  run-on-comment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check if comment contains trigger phrase
+        run: |
+          if [[ ${{ github.event.comment.body }} == *"[your trigger phrase]"* ]]; then
+            echo "Trigger phrase found. Running workflow."
+          else
+            echo "No trigger phrase found. Skipping workflow."
+            exit 0
+          fi
+
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16 '
+
+      - name: Install dependencies
+        run: yarn install # Adjust the command based on your project setup
+
+      - name: Run tests and generate coverage
+        run: yarn test -- --coverage
+
+      - name: Upload coverage to GitHub
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage
+          path: coverage
+
+      - name: lint
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: eslint:github-action
