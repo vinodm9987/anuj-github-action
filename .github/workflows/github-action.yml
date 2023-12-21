@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-   test:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,6 +23,9 @@ jobs:
 
       - name: Run tests and generate coverage
         run: yarn test -- --coverage
+
+      - name: List Files in Directory
+        run: ls -R
 
       - name: Upload coverage to GitHub
         uses: actions/upload-artifact@v2

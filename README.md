@@ -28,6 +28,8 @@
 
 ## Installation
 
+[![Coverage Status](https://img.shields.io/badge/coverage-YOUR_COVERAGE_PERCENTAGE-brightgreen.svg)](LINK_TO_COVERAGE_REPORT)
+
 ```bash
 $ npm install
 ```
