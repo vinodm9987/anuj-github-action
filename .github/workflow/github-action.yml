@@ -9,12 +9,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check if comment contains trigger phrase
+      - name: Check if comment contains code-related content
         run: |
-          if [[ ${{ github.event.comment.body }} == *"[your trigger phrase]"* ]]; then
-            echo "Trigger phrase found. Running workflow."
+          if [[ ${{ github.event.comment.body }} =~ (\bcode\b|\bfunction\b|\bclass\b|\bimport\b|\bconst\b) ]]; then
+            echo "Code-related content found. Running workflow."
           else
-            echo "No trigger phrase found. Skipping workflow."
+            echo "No code-related content found. Skipping workflow."
             exit 0
           fi
 
@@ -24,7 +24,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16 '
+          node-version: '16'
 
       - name: Install dependencies
         run: yarn install # Adjust the command based on your project setup
