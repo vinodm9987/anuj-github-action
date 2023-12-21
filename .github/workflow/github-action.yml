@@ -1,7 +1,7 @@
 name: Run Workflow on Comment
 
 on:
-  pull_request:
+  push:
     branches:
       - main
 
