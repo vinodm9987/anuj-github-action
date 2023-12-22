@@ -1,3 +1,12 @@
+# [0.1.0](https://github.com/vinodm9987/anuj-github-action/compare/v0.0.3...v0.1.0) (2023-12-22)
+
+
+### Features
+
+* **release:** create release yml file ([4e8b3ac](https://github.com/vinodm9987/anuj-github-action/commit/4e8b3ace3f8bd37d20548578d47c34220961fac4))
+
+
+
 ## [0.0.3](https://github.com/vinodm9987/anuj-github-action/compare/v0.0.2...v0.0.3) (2023-12-21)
 
 
