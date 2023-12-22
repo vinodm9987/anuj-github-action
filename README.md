@@ -28,7 +28,7 @@
 
 ## Installation
 
-[![Coverage Status](https://img.shields.io/badge/coverage-YOUR_COVERAGE_PERCENTAGE-brightgreen.svg)](LINK_TO_COVERAGE_REPORT)
+[![HTML File](https://img.shields.io/badge/Open-HTML%20File-blue.svg)](http://127.0.0.1:5500/coverage/lcov-report/index.html)
 
 ```bash
 $ npm install

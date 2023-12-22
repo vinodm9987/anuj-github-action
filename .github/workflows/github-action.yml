@@ -1,9 +1,8 @@
 name: Run Workflow on Comment
 
 on:
-  push:
-    branches:
-      - main
+  issue_comment:
+    types: [created]
 
 jobs:
   test:
@@ -19,13 +18,10 @@ jobs:
           node-version: '16'
 
       - name: Install dependencies
-        run: yarn install # Adjust the command based on your project setup
+        run: yarn install
 
       - name: Run tests and generate coverage
         run: yarn test -- --coverage
-
-      - name: List Files in Directory
-        run: ls -R
 
       - name: Upload coverage to GitHub
         uses: actions/upload-artifact@v2
