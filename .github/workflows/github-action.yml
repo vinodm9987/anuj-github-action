@@ -1,7 +1,9 @@
-name: Run Workflow on Comment
+name: Your Workflow Name
 
 on:
-  push: '#'
+  push:
+    branches:
+      - '*'
 
 jobs:
   test:
