@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: coverage
-          path: coverage
+          path: coverage  #
 
       - name: lint
         uses: borales/actions-yarn@v2.0.0
