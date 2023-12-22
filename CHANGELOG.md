@@ -1,3 +1,12 @@
+## [0.1.1](https://github.com/vinodm9987/anuj-github-action/compare/v0.1.0...v0.1.1) (2023-12-22)
+
+
+### Bug Fixes
+
+* **release:** basic change ([055a3a8](https://github.com/vinodm9987/anuj-github-action/commit/055a3a87962063c094583d66dea7a7cf23d2c84f))
+
+
+
 # [0.1.0](https://github.com/vinodm9987/anuj-github-action/compare/v0.0.3...v0.1.0) (2023-12-22)
 
 
